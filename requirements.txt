@@ -1,0 +1,4 @@
+azure-functions
+# Add your LLM dependencies here, e.g. openai, transformers, etc. 
+langchain
+azure-ai-openai 
