@@ -5,6 +5,7 @@ from langchain.chat_models import AzureChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 
 # Helper function to extract info using LLM
+
 def extract_meeting_info(transcript, llm):
     prompt = ChatPromptTemplate.from_template(
         """
@@ -23,6 +24,7 @@ def extract_meeting_info(transcript, llm):
     response = chain.invoke({"transcript": transcript})
     return response.content
 
+#Main function
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Processing meeting transcript for organization.')
     try:
